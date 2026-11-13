@@ -416,3 +416,32 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# ---------------------------------------------------------------------------
+# Expo / React Native (Folio Office)
+# ---------------------------------------------------------------------------
+node_modules/
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+.metro-health-check*
+*.tsbuildinfo
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+.env*.local
+
+# Dossiers natifs générés par `expo prebuild` (génération native continue)
+/android
+/ios
+.kotlin/
+
+# Clés et certificats de signature
+*.jks
+*.keystore
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.pem

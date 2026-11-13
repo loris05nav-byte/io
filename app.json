@@ -1,0 +1,71 @@
+{
+  "expo": {
+    "name": "Folio Office",
+    "slug": "folio-office",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "scheme": "foliooffice",
+    "backgroundColor": "#F7F8FD",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.foliooffice.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "La caméra sert à photographier un document pour en extraire le texte.",
+        "NSPhotoLibraryUsageDescription": "L'accès aux photos permet d'insérer une image ou de numériser une photo existante."
+      }
+    },
+    "android": {
+      "package": "com.foliooffice.app",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#3F51C7",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "softwareKeyboardLayoutMode": "resize",
+      "permissions": [
+        "android.permission.CAMERA"
+      ],
+      "blockedPermissions": [
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Autoriser Folio Office à utiliser la caméra pour numériser vos documents.",
+          "recordAudioAndroid": false
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Autoriser Folio Office à accéder à vos photos pour insérer ou numériser une image.",
+          "microphonePermission": false
+        }
+      ],
+      "expo-font",
+      "expo-sharing",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 180,
+          "resizeMode": "contain",
+          "backgroundColor": "#3F51C7",
+          "dark": {
+            "backgroundColor": "#101217"
+          }
+        }
+      ],
+      "./plugins/withMlKitOcrModel"
+    ]
+  }
+}
